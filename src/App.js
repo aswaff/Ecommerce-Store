@@ -4,11 +4,14 @@ import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
 
 
 function App() {
   return (
     <div>
+      <Header />
+      {/* Added this outside of the switch and route components so that it would always have header already rendered */}
       <Switch>
         <Route exact path='/' component={HomePage}/>
         <Route exact path='/shop' component={ShopPage}/>
